@@ -1,228 +1,45 @@
-/* Reset cơ bản */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
-    color: #333;
+    color: #333333;
 }
-
-/* Header */
 header {
-    background-color: #007bff;
+    background-color: #0077cc;
     color: white;
+    padding: 1rem 0;
     text-align: center;
-    padding: 20px 0;
 }
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 10px 0 0;
-}
-
-/* Navigation */
-nav {
-    background-color: #0056b3;
-    padding: 10px 20px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
-    border-radius: 5px; /* Rounded corners */
-}
-
-/* Main Content */
-main {
+.container {
     padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-main h2 {
-    color: #0056b3;
+.illustration {
+    text-align: center;
+    margin: 20px 0;
 }
-
-/* Section */
-section {
-    display: flex;
-    flex-direction: column; /* Ensure everything inside is stacked vertically */
-    align-items: flex-start; /* Align the list items to the left */
-    justify-content: flex-start;
-    padding: 20px;
-    text-align: left;
-}
-
-/* Căn giữa hình ảnh */
-img {
-    display: block;
-    margin: 20px auto;
+.illustration img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 5px;
 }
-
-/* Danh sách số thứ tự */
-ol {
-    list-style: none;
-    counter-reset: item;
-    padding-left: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column; /* Ensure the list is stacked vertically */
-    align-items: flex-start;
+.illustration p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555555;
 }
-
-ol > li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Space between list items */
-}
-
-ol > li::before {
-    content: counter(item) "."; /* Display the number */
-    counter-increment: item;
-    display: inline-block;
-    font-weight: bold;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    background-color: #007bff; /* Blue background for numbers */
-    color: white;
-    margin-right: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-ol > li:hover::before {
-    background-color: #0056b3; /* Darker color on hover */
-    transform: scale(1.1); /* Slight zoom effect */
-}
-
-/* Danh sách không thứ tự */
-ul {
-    margin-left: 2rem; /* Indentation for the list */
-    padding-left: 0;
-    list-style-type: disc; /* Default bullet points */
-    display: flex;
-    flex-direction: column; /* Ensure list items are stacked vertically */
-}
-
-ul li {
-    margin-bottom: 10px; /* Space between list items */
-    display: list-item;
-}
-
-/* Footer */
 footer {
-    background-color: #333333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
     margin-top: 20px;
+    padding: 10px 0;
+    background-color: #0077cc;
+    color: white;
 }
-
-/* Responsive Design for Mobile */
-@media (max-width: 600px) {
-    body {
-        padding: 10px; /* Adjust padding for mobile */
-    }
-
-    /* Header */
-    header {
-        padding: 15px 0; /* Adjust header padding */
-    }
-
-    header h1 {
-        font-size: 2rem; /* Smaller header font size */
-    }
-
-    /* Navigation */
-    nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px; /* More space between items */
-    }
-
-    /* Section */
-    section {
-        padding: 10px; /* Adjust section padding for mobile */
-    }
-
-    /* Image */
-    img {
-        max-width: 90%; /* Limit image width on mobile */
-    }
-
-    /* Ordered List */
-    ol {
-        flex-direction: column; /* Ensure the ordered list is vertical */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    ol > li {
-        margin-right: 0; /* Remove margin between list items */
-    }
-
-    ol > li::before {
-        margin-bottom: 5px; /* Add space between number and list item */
-    }
-
-    /* Footer */
-    footer {
-        font-size: 0.9rem; /* Smaller footer text size */
-        padding: 15px 0; /* Adjust padding */
-    }
-}
-
-/* Responsive Design for Desktop */
-@media (min-width: 601px) {
-    /* Main content (desktop view) */
-    main {
-        padding: 40px;
-    }
-
-    header h1 {
-        font-size: 3rem; /* Larger font size for desktop */
-    }
-
-    img {
-        max-width: 100%; /* Full width for desktop images */
-    }
-
-    ol {
-        display: flex; /* Horizontal ordered list for desktop */
-    }
-
-    ol > li {
-        margin-right: 20px; /* Space between list items */
-    }
-}
+.img{text-align: center;}
